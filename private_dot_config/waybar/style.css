@@ -1,0 +1,180 @@
+/* Gruvbox color palette */
+@define-color trans rgba(0,0,0,0);
+@define-color bg #282828;
+@define-color fg #ebdbb2;
+@define-color red #fb4934;
+@define-color green #b8bb26;
+@define-color yellow #fabd2f;
+@define-color blue #83a598;
+@define-color purple #d3869b;
+@define-color aqua #8ec07c;
+@define-color gray #a89984;
+@define-color orange #fe8019;
+
+* {
+	font-size: 14px;
+	font-family: AtkinsonHyperlegibleNext;
+	font-weight: normal;
+}
+
+window#waybar {
+	/*background: #292b2e;
+	color: #fdf6e3; */
+	background-color: @trans;
+}
+
+.modules-left {
+    background: @bg;
+    padding: 0px 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: @bg;
+    border-radius: 5px;
+}
+
+/* Refer to clock. It's the only center module */
+.modules-center {
+}
+
+.modules-right {
+    background: @bg;
+    padding: 0px 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: @bg;
+    border-radius: 5px;
+}
+
+#window {
+    
+}
+
+#workspaces {
+    color: @fg;
+    background: @bg;
+    padding: 0 5px;
+    border-style: none;
+    border-width: 2px;
+    border-color: @fg;
+    border-radius: 5px;
+}
+
+#workspaces button {
+    color: @green;
+    background: @bg;
+    padding: 0 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: @bg;
+    border-radius: 5px;
+}
+
+#workspaces button.empty {
+}
+
+#workspaces button:hover {
+    color: @red;
+    background: @bg;
+    padding: 0 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: @red;
+    border-radius: 5px;
+}
+#workspaces button.active {
+    color: @aqua;
+    background: @bg;
+    padding: 0 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: @aqua;
+    border-radius: 5px;
+}
+
+#clock {
+    color: @fg;
+    background: @bg;
+    padding: 0px 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: @bg;
+    border-radius: 5px;
+}
+
+#idle_inhibitor {
+    padding: 0px 10px;
+    background: @bg;
+    color: @red;
+}
+
+#pulseaudio {
+    background: @bg;
+    color: @green;
+    padding: 0px 5px;
+}
+
+#power-profiles-daemon {
+    background: @bg;
+    color: @yellow;
+    padding: 0 10px;
+}
+
+#cpu {
+    border-radius: 5px 0px 0px 5px;
+    background: @bg;
+    color: @blue;
+    padding: 0px 5px;
+}
+
+#memory{
+    border-radius: 0px;
+    background: @bg;
+    color: @blue;
+    padding: 0px 5px;
+}
+
+#temperature{
+    border-radius: 0px 5px 5px 0px;
+    background: @bg;
+    color: @blue;
+    padding: 0px 5px;
+}
+
+#backlight{
+    background: @bg;
+    color: @purple;
+    padding: 0 5px;
+}
+
+#tray{
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: @fg;
+    background: @bg;
+    color: @fg;
+    padding: 0 5px;
+}
+
+#battery {
+    background: @bg;
+    color: @aqua;
+    padding: 0 5px;
+}
+#disk {
+	color: #b58900;
+}
+
+#network {
+    border-radius: 10px;
+    color: rgb(234,219,178);
+    background: rgb(204,35,28);
+    padding: 0 10px;
+}
+
+#custom-wlogout {
+    border-radius: 5px;
+    background: @red;
+    color: @bg;
+    padding: 0 10px;
+}
