@@ -1,0 +1,130 @@
+;; Comments are prefixed by double-semicolon. A single semicolon is parsed as the
+;; keyboard key. Comments are ignored for the configuration file.
+;;
+;; This configuration language is Lisp-like. If you're unfamiliar with Lisp,
+;; don't be alarmed. The maintainer jtroo is also unfamiliar with Lisp. You
+;; don't need to know Lisp in-depth to be able to configure kanata.
+;;
+;; If you follow along with the examples, you should be fine. Kanata should
+;; also hopefully have helpful error messages in case something goes wrong.
+;; If you need help, you are welcome to ask.
+
+(defcfg
+  sequence-input-mode visible-backspaced
+)
+
+
+;; Only one defsrc is allowed.
+;;
+;; defsrc defines the keys that will be intercepted by kanata. The order of the
+;; keys matches with deflayer declarations and all deflayer declarations must
+;; have the same number of keys as defsrc. Any keys not listed in defsrc will
+;; be passed straight to the operating system.
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt          spc             ralt rmet rctl
+)
+
+;; The first layer defined is the layer that will be active by default when
+;; kanata starts up.
+(deflayer gallium
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
+  @ext n    r    t    s    v    y    p    e    a    i    /    ret
+  lsft x    g    m    c    q    k    h    '    ;    .    rsft
+  lctl lmet lalt          spc             @3rd rmet rctl
+)
+
+;; Extended layer
+
+(defalias
+  ext (layer-while-held extend)
+  can (layer-switch gallium)
+  ;; The @ded and @3rd bring up the accent layer. They're shown below.
+  3rd (layer-while-held accent)
+  sAl C-a
+  cpy C-c
+  pst C-v
+  cut C-x
+  udo C-z
+)
+
+(deflayer extend
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _   @ded esc  @num  _    _   pgup home  up  bspc  _    _    _    _
+  _   @sAl lalt lsft lctl  _   pgdn lft  down rght @ded  _    _
+  _   @udo @cut @cpy @pst  _    _   end   _   del   _    _
+  _    _    _            enter            _    _    _
+)
+
+;; Accent layers & Numpad layers
+
+(defalias
+  ded (one-shot 1000 (layer-while-held accent))
+  4th (layer-while-held upAccent)
+  ;; Needs a US-intl layout as base to work because it uses AltGr+key to provide accents. Works better than Unicode below.
+  num (layer-while-held numpadLayer)
+  á RA-a
+  é RA-e
+  í RA-i
+  ó RA-o
+  ú RA-u
+  ü RA-y
+  ñ RA-n
+  Á RA-S-a
+  É RA-S-e
+  Í RA-S-i
+  Ó RA-S-o
+  Ú RA-S-u
+  Ü RA-S-y
+  Ñ RA-S-n
+  ¡ RA-S-1
+  ¿ RA-/
+  ;; Unused because causes issues on some applications
+  ;;á (unicode á)
+  ;;é (unicode é)
+  ;;í (unicode í)
+  ;;ó (unicode ó)
+  ;;ú (unicode ú)
+  ;;ü (unicode ü)
+  ;;ñ (unicode ñ)
+  ;;Á (unicode Á)
+  ;;É (unicode É)
+  ;;Í (unicode Í)
+  ;;Ó (unicode Ó)
+  ;;Ú (unicode Ú)
+  ;;Ü (unicode Ü)
+  ;;Ñ (unicode Ñ)
+  ;;¡ (unicode ¡)
+  ;;¿ (unicode ¿)
+)
+
+;;@3rd and @ded bring out the 'accent' layer. They are in the 'extend' layer.
+(deflayer accent
+  _    @¡   _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    @ó   @ú   @ü   _    _    _
+  _    @ñ   _    _    _    _    _    _    @é   @á   @í   @¿   _
+  @4th _    _    _    _    _    _    _    _    _    _    @4th
+  _    _    _              _              _    _    _
+)
+
+;;@4th brings out the upAccent layer (basically just uppercase). It's used in the 'accent' layer.
+(deflayer upAccent
+  _    @¡   _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    @Ó   @Ú   @Ü   _    _    _
+  _    @Ñ   _    _    _    _    _    _    @É   @Á   @Í   @¿   _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _    _
+)
+
+;;@num brings out the numpadLayer. It's used in the 'extend' layer above.
+(deflayer numpadLayer
+  _    _    _    _    _    _    _   kp7  kp8  kp9  kp*  kp-   _    _
+  _    _    _    _    _    _    _   kp4  kp5  kp6  kp+   _    _    _
+  _    _    _    _    _    _    _   kp1  kp2  kp3 enter  _    _
+  _    _    _    _    _    _    _   kp0  kp0  kp.  kp/   _
+  _    _    _              _              _    _    _
+)
