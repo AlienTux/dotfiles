@@ -46,7 +46,7 @@
   };
 
   # Change default configuration location
-  nix.nixPath = [ "nixos-config=/home/alientux/.config/nixos/configuration.nix" ];
+  # nix.nixPath = [ "nixos-config=/home/alientux/.config/nixos/configuration.nix" ];
 
   ################################################################################
   # Desktop environment and window manager configurations
