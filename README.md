@@ -1,3 +1,3 @@
-These are simply my dotfiles managed by [chezmoi]!(https://www.chezmoi.io/).
+These are simply my dotfiles managed by [chezmoi.io](https://www.chezmoi.io/).
 
 Currently using NixOS with Niri.
