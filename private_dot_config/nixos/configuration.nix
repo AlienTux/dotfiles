@@ -146,7 +146,8 @@
 
   # Fix mimetypes in Dolphin File Manager when using other window manaders
   # Reference: https://github.com/NixOS/nixpkgs/issues/409986#issuecomment-3217982330
-  environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+  environment.etc."xdg/menus/applications.menu".source =
+    "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
   # Desktop portal configuration for screen sharing
   xdg.portal = {
@@ -242,6 +243,9 @@
     dconf-editor
     # Dolphin File Manager required files
     kdePackages.dolphin
+    kdePackages.dolphin-plugins
+    kdePackages.baloo-widgets
+    kdePackages.baloo
     kdePackages.qtsvg
     kdePackages.kservice # Needed for kbuildsycoca6 to fix mimetypes not showing in Dolphin
     # kdePackages.kio # needed since 25.11
