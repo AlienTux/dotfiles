@@ -45,6 +45,9 @@
     LC_TIME = "C.UTF-8";
   };
 
+  # Change default configuration location
+  nix.nixPath = [ "nixos-config=/home/alientux/.config/nixos/configuration.nix" ];
+
   ################################################################################
   # Desktop environment and window manager configurations
   ################################################################################
@@ -146,6 +149,7 @@
 
   # Fix mimetypes in Dolphin File Manager when using other window manaders
   # Reference: https://github.com/NixOS/nixpkgs/issues/409986#issuecomment-3217982330
+  # Reference: https://discourse.nixos.org/t/hyprland-dolphin-file-manager-trying-to-open-an-image-asks-for-a-program-to-use-for-open-it/69824/3
   environment.etc."xdg/menus/applications.menu".source =
     "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
 
@@ -267,7 +271,6 @@
     speedcrunch
     image-roll
     masterpdfeditor
-    pdfstudioviewer
     papers
     feh
     loupe
@@ -350,6 +353,9 @@
   services.flatpak.enable = true;
 
   services.syncthing.enable = true;
+
+  # Enable Upower for Gnome Power Statistics
+  services.upower.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
