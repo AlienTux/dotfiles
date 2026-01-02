@@ -47,6 +47,16 @@
 
   # Change default configuration location
   # nix.nixPath = [ "nixos-config=/home/alientux/.config/nixos/configuration.nix" ];
+  nix.nixPath = [''
+                   if nix.channel.enable
+                     then [
+                       "nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos"
+                       "nixos-config=/etc/nixos/configuration.nix"
+                       "/nix/var/nix/profiles/per-user/root/channels"
+                     ]
+                   else [];
+                 ''
+                ];
 
   ################################################################################
   # Desktop environment and window manager configurations
