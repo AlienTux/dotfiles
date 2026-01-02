@@ -302,6 +302,7 @@
     gparted
     librewolf
     floorp-bin
+    teamviewer
   ];
 
   ################################################################################
@@ -324,7 +325,6 @@
     nerd-fonts.symbols-only
     line-awesome
     font-awesome
-    teamviewer
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
