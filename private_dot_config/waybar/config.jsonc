@@ -238,7 +238,9 @@
     "custom/wlogout":{
         // Icons: 󰐥 
         "format": "󰐥",
-        "on-click": "pkill wlogout || wlogout",
+        //"on-click": "pkill wlogout || wlogout",
+        "on-click": "wlogout",
+        //"on-click": "/run/current-system/sw/bin/wleave",
         "tooltip": "false"
     },
     

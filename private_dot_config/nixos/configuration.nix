@@ -45,6 +45,10 @@
     LC_TIME = "C.UTF-8";
   };
 
+  ################################################################################
+  # Desktop environment and window manager configurations
+  ################################################################################
+
   # Enable the X11 windowing system.
   #services.xserver.enable = true;
 
@@ -70,43 +74,12 @@
   # Enable Waybar
   programs.waybar.enable = true; # top bar
 
-  # Steam
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
-  programs.gamemode.enable = true;
-
-  # Environment variables (Session)
-  environment.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
-      "\${HOME}/.steam/root/compatibilitytools.d";
-
-    XDG_CURRENT_DESKTOP = "niri";
-    XDG_SESSION_TYPE = "wayland";
-    XDG_SESSION_DESKTOP = "niri";
-
-    GITHUB_USERNAME = "AlienTux";
-  };
-
-  # Desktop portal configuration for screen sharing
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-gnome
+  # Extend the systemd service environment to be able to execute programs
+  systemd.user.services.waybar = {
+    serviceConfig.Environment = [
+      #''"PATH=${pkgs.wlogout}/bin:${pkgs.coreutils}/bin:${pkgs.bash}/bin"''
+      ''"PATH=${pkgs.wlogout}/bin:${pkgs.wleave}/bin:${pkgs.pavucontrol}/bin:${pkgs.waylogout}/bin:${pkgs.pamixer}/bin"''
     ];
-    config = {
-      common = {
-        default = [ "gtk" ];
-      };
-      niri = {
-        default = [
-          "gtk"
-          "gnome"
-        ];
-        "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
-        "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
-      };
-    };
   };
 
   # Configure keymap in X11
@@ -149,6 +122,58 @@
     ];
   };
 
+  ################################################################################
+  # Environment variables and portal configs
+  ################################################################################
+
+  # Environment variables (Session)
+  environment.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+      "\${HOME}/.steam/root/compatibilitytools.d";
+
+    XDG_CURRENT_DESKTOP = "niri";
+    XDG_SESSION_TYPE = "wayland";
+    XDG_SESSION_DESKTOP = "niri";
+  };
+
+  # Fix mimetypes in Dolphin File Manager when using other window manaders
+  # Reference: https://github.com/NixOS/nixpkgs/issues/409986#issuecomment-3217982330
+  environment.etc."xdg/menus/applications.menu".source = "${pkgs.kdePackages.plasma-workspace}/etc/xdg/menus/plasma-applications.menu";
+
+  # Desktop portal configuration for screen sharing
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+    ];
+    config = {
+      common = {
+        default = [ "gtk" ];
+      };
+      niri = {
+        default = [
+          "gtk"
+          "gnome"
+        ];
+        "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
+        "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
+      };
+    };
+  };
+
+  ################################################################################
+  # Installing some programs with options
+  ################################################################################
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # Install Steam
+  programs.steam.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+  programs.gamemode.enable = true;
+
   # Install fish
   programs.fish.enable = true;
 
@@ -177,8 +202,9 @@
     binfmt = true;
   };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  ################################################################################
+  # Package list
+  ################################################################################
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -186,7 +212,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     # Applications for Niri
-    alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl
+    alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl swaybg
     font-manager
     mangohud
     protonup-ng
@@ -206,8 +232,10 @@
     chezmoi
     gedit
     dconf-editor
+    # Dolphin File Manager required files
     kdePackages.dolphin
     kdePackages.qtsvg
+    kdePackages.kservice # Needed for kbuildsycoca6 to fix mimetypes not showing in Dolphin
     # kdePackages.kio # needed since 25.11
     # kdePackages.kio-fuse #to mount remote filesystems via FUSE
     # kdePackages.kio-extras #extra protocols support (sftp, fish and more)
@@ -219,11 +247,23 @@
     nnn
     atuin
     pavucontrol
+    pamixer
     vlc
     veloren
     #stremio
-    #git PENDIENTE instalarlo como un "programs...."
+    fastfetch
+    speedcrunch
+    image-roll
+    masterpdfeditor
+    pdfstudioviewer
+    papers
+    feh
+    loupe
   ];
+
+  ################################################################################
+  # Fonts and icons
+  ################################################################################
 
   # Font and icon configuration
   fonts.packages = with pkgs; [
@@ -274,6 +314,10 @@
     };
   };
 
+  ################################################################################
+  # Additional services
+  ################################################################################
+
   services.kanata = {
     enable = true;
     keyboards = {
@@ -284,6 +328,7 @@
 
   services.power-profiles-daemon.enable = true;
 
+  # Enable asusd daemon for ROG Control Center
   services.asusd = {
     enable = true;
     enableUserService = true;
@@ -292,9 +337,6 @@
   services.flatpak.enable = true;
 
   services.syncthing.enable = true;
-
-  # Not needed because the default service pulls the config from ~/.config/waybar/
-  #services.waybar.enable = false;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
