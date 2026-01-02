@@ -86,12 +86,6 @@
     pamixer
     procps # Has `pkill`
   ];
-  #systemd.user.services.waybar = {
-  #  serviceConfig.Environment = [
-  #    #''"PATH=${pkgs.wlogout}/bin:${pkgs.coreutils}/bin:${pkgs.bash}/bin"''
-  #    ''"PATH=${pkgs.wlogout}/bin:${pkgs.wleave}/bin:${pkgs.pavucontrol}/bin:${pkgs.waylogout}/bin:${pkgs.pamixer}/bin"''
-  #  ];
-  #};
 
   # Configure keymap in X11
   services.xserver.xkb = {
