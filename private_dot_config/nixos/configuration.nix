@@ -258,6 +258,7 @@
     # Stuff for Uni...?
     zoom-us
     remmina
+    onedrivegui
     eza
     hledger
     nnn
@@ -275,6 +276,9 @@
     feh
     loupe
     gnome-power-manager
+    gparted
+    librewolf
+    floorp-bin
   ];
 
   ################################################################################
@@ -356,6 +360,9 @@
 
   # Enable Upower for Gnome Power Statistics
   services.upower.enable = true;
+
+  # OneDrive
+  services.onedrive.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
