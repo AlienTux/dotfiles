@@ -17,7 +17,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "alientux-nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -66,7 +66,8 @@
   security.polkit.enable = true; # polkit
   services.gnome.gnome-keyring.enable = true; # secret service
   security.pam.services.swaylock = {};
-
+  
+  # Enable Waybar
   programs.waybar.enable = true; # top bar
 
   # Steam
@@ -82,6 +83,8 @@
     XDG_CURRENT_DESKTOP = "niri";
     XDG_SESSION_TYPE = "wayland";
     XDG_SESSION_DESKTOP = "niri";
+
+    GITHUB_USERNAME = "AlienTux";
   };
 
   # Desktop portal configuration for screen sharing
@@ -166,6 +169,7 @@
 
   # Install git
   programs.git.enable = true;
+  programs.lazygit.enable = true;
 
   # Configure to be able to run AppImages
   programs.appimage = {
