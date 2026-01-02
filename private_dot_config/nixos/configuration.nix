@@ -75,12 +75,20 @@
   programs.waybar.enable = true; # top bar
 
   # Extend the systemd service environment to be able to execute programs
-  systemd.user.services.waybar = {
-    serviceConfig.Environment = [
-      #''"PATH=${pkgs.wlogout}/bin:${pkgs.coreutils}/bin:${pkgs.bash}/bin"''
-      ''"PATH=${pkgs.wlogout}/bin:${pkgs.wleave}/bin:${pkgs.pavucontrol}/bin:${pkgs.waylogout}/bin:${pkgs.pamixer}/bin"''
-    ];
-  };
+  systemd.user.services.waybar.path = with pkgs; [
+    wlogout
+    wleave
+    pavucontrol
+    waylogout
+    pamixer
+    procps # Has `pkill`
+  ];
+  #systemd.user.services.waybar = {
+  #  serviceConfig.Environment = [
+  #    #''"PATH=${pkgs.wlogout}/bin:${pkgs.coreutils}/bin:${pkgs.bash}/bin"''
+  #    ''"PATH=${pkgs.wlogout}/bin:${pkgs.wleave}/bin:${pkgs.pavucontrol}/bin:${pkgs.waylogout}/bin:${pkgs.pamixer}/bin"''
+  #  ];
+  #};
 
   # Configure keymap in X11
   services.xserver.xkb = {
