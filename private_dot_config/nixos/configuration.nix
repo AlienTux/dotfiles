@@ -302,7 +302,7 @@
     gparted
     librewolf
     floorp-bin
-    teamviewer
+    rustdesk-flutter
   ];
 
   ################################################################################
