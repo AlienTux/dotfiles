@@ -248,7 +248,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
   #  wget
     # Applications for Niri
-    alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl swaybg
+    alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl swaybg gammastep
     font-manager
     mangohud
     protonup-ng
@@ -293,16 +293,22 @@
     #stremio
     fastfetch
     speedcrunch
+    # Image viewers
     image-roll
-    masterpdfeditor
-    papers
     feh
     loupe
+    # PDF Editors
+    masterpdfeditor
+    papers
+    kdePackages.okular
+    #
     gnome-power-manager
     gparted
     librewolf
     floorp-bin
     rustdesk-flutter
+    pcloud
+    filen-desktop
   ];
 
   ################################################################################
