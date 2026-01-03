@@ -309,6 +309,9 @@
     rustdesk-flutter
     pcloud
     filen-desktop
+    # System monitors
+    mission-center
+    resources
   ];
 
   ################################################################################
@@ -377,6 +380,9 @@
 
   # Teamviewer
   services.teamviewer.enable = true;
+
+  # Input remapper
+  services.input-remapper.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
