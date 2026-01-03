@@ -270,7 +270,7 @@ spawn-at-startup "gammastep-indicator" "-l" "14.611396:-90.506679" "-t" "6500:40
 //spawn-at-startup "/home/alientux/bin/appImages/onedrivegui.appimage"
 spawn-at-startup "onedrivegui"
 //spawn-at-startup "/home/alientux/bin/appImages/pcloud/pcloud"
-spawp-at-startup "pcloud"
+spawn-at-startup "pcloud"
 //spawn-at-startup "/usr/libexec/polkit-kde-authentication-agent-1"
 // spawn-at-startup "xwayland-satellite" ":11"
 spawn-at-startup "input-remapper-control" "--command" "autoload"
