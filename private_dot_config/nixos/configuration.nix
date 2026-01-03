@@ -257,7 +257,6 @@
     bibata-cursors
     asusctl
     networkmanagerapplet
-    input-remapper
     polkit_gnome
     wlogout
     waylogout
@@ -282,20 +281,12 @@
     zoom-us
     remmina
     onedrivegui
-    eza
-    hledger
-    nnn
-    atuin
-    pavucontrol
-    pamixer
     vlc
     veloren
     #stremio
-    fastfetch
-    speedcrunch
     # Image viewers
-    image-roll
-    feh
+    #image-roll
+    #feh
     loupe
     # PDF Editors
     masterpdfeditor
@@ -304,11 +295,22 @@
     #
     gnome-power-manager
     gparted
+    # Browsers
     librewolf
     floorp-bin
+    ungoogled-chromium
+    # Utilities
     rustdesk-flutter
     pcloud
     filen-desktop
+    fastfetch
+    speedcrunch
+    eza
+    hledger
+    nnn
+    atuin
+    pavucontrol
+    pamixer
     # System monitors
     mission-center
     resources
@@ -379,7 +381,7 @@
   services.onedrive.enable = true;
 
   # Teamviewer
-  services.teamviewer.enable = true;
+  #services.teamviewer.enable = true;
 
   # Input remapper
   services.input-remapper.enable = true;
