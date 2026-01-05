@@ -346,7 +346,7 @@ window-rule {
 
 // Calculator
 window-rule {
-    match app-id="org.speedcrunch.speedcrunch"
+    match app-id="org.speedcrunch."
     open-floating true
     default-column-width { fixed 390;}
     default-window-height { fixed 540;}
