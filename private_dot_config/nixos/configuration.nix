@@ -311,6 +311,8 @@
     atuin
     pavucontrol
     pamixer
+    pom
+    tomato-c
     # System monitors
     mission-center
     resources
