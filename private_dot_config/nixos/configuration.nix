@@ -313,6 +313,7 @@
     pamixer
     pom
     tomato-c
+    cryptomator
     # System monitors
     mission-center
     resources
