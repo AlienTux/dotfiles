@@ -281,6 +281,7 @@
     zoom-us
     remmina
     onedrivegui
+    openfortivpn
     vlc
     veloren
     #stremio
@@ -315,6 +316,8 @@
     tomato-c
     cryptomator
     anki
+    wl-mirror
+    gearlever
     # System monitors
     mission-center
     resources
@@ -377,8 +380,13 @@
   };
 
   services.flatpak.enable = true;
-
-  services.syncthing.enable = true;
+  
+  # Syncthing configuration
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    guiAddress = "127.0.0.1:8384";
+  }
 
   # Enable Upower for Gnome Power Statistics
   services.upower.enable = true;
