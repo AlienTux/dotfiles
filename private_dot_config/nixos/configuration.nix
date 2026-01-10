@@ -314,9 +314,11 @@
     pom
     tomato-c
     cryptomator
+    anki
     # System monitors
     mission-center
     resources
+    # Misc
     fuse
   ];
 
