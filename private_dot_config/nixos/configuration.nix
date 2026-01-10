@@ -384,9 +384,11 @@
   # Syncthing configuration
   services.syncthing = {
     enable = true;
-    user = "alientux";
     openDefaultPorts = true;
     guiAddress = "127.0.0.1:8384";
+    user = "alientux";
+    dataDir = "/home/alientux";  # default location for new folders
+    configDir = "/home/alientux/.config/syncthing";
   };
 
   # Enable Upower for Gnome Power Statistics
