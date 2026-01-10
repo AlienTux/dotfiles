@@ -149,7 +149,7 @@
   users.users.alientux = {
     isNormalUser = true;
     description = "AlienTux";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "input"];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "input" "syncthing"];
     shell = pkgs.fish;
     packages = with pkgs; [
     #  here I can install packages for my user. I prefer to do it system-wide
@@ -224,7 +224,7 @@
       pkgs.obs-studio-plugins.obs-vaapi
       pkgs.obs-studio-plugins.droidcam-obs
       pkgs.obs-studio-plugins.obs-vkcapture
-      #pkgs.obs-studio-plugins.obs-gstreamer
+      pkgs.obs-studio-plugins.obs-gstreamer
     ];
   };
 
