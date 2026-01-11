@@ -389,6 +389,27 @@
     user = "alientux";
     dataDir = "/home/alientux";  # default location for new folders
     configDir = "/home/alientux/.config/syncthing";
+
+    settings = {
+      devices = {
+        "OnePlusPhone".id  = "BIOVHNA-QK5SQJT-MR2WI3K-B4MWXI6-FFFNRPK-6I4HBT7-QZTTKS2-NWCCXAV";
+        "SamsungTablet".id = "5VZVSVN-SFQKDKF-LIB3G4X-27CEAVG-LEB4FKQ-E6SKDKF-4QG5XCZ-2GFYRQ6";
+#        "SteamDeck".id     = "";
+      };
+
+      folders = {
+        "Syncthing" = {
+          id = "g6eu0-oej32";
+          path = "~/Syncthing";
+          devices = ["OnePlusPhone" "SamsungTablet"];
+          versioning = {
+            type = "simple";
+            params.keep = "10";
+            params.cleanoutDays = "0";
+          };
+        };
+      };
+    };
   };
 
   # Enable Upower for Gnome Power Statistics
