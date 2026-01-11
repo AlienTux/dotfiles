@@ -124,7 +124,16 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  services.printing.cups-pdf.enable = true;
+  services.printing.cups-pdf = {
+    enable = true;
+    instances = {
+      pdf = {
+        settings = {
+          Out = "\${HOME}/cups-pdf";
+        };
+      };
+    };
+  };
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
