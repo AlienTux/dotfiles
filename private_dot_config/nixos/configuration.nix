@@ -70,8 +70,14 @@
   #services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
+  #services.displayManager.gdm.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
+
+  # Enable lemurs TUI Display Manager
+  services.displayManager.lemurs.enable = true;
+  #services.displayManager.lemurs.settings = {
+  #
+  #};
 
   # Enable OpenGL
   hardware.graphics = {
@@ -259,22 +265,30 @@
   #  wget
     # Applications for Niri
     alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl swaybg gammastep
-    font-manager
-    mangohud
-    protonup-ng
     nautilus
-    libreoffice
-    bibata-cursors
-    asusctl
     networkmanagerapplet
     polkit_gnome
     wlogout
     waylogout
     wleave
     power-profiles-daemon
-    #gnome-tweaks
-    papirus-icon-theme
     chezmoi
+    asusctl
+      # Testing
+      ghostty   
+    # Eye-candy
+    bibata-cursors
+    papirus-icon-theme
+    # Gaming
+    mangohud
+    protonup-ng
+    veloren    
+    # Office
+    libreoffice
+    masterpdfeditor
+    papers
+    kdePackages.okular
+    #gnome-tweaks
     gedit
     dconf-editor
     # Dolphin File Manager required files
@@ -292,25 +306,28 @@
     remmina
     onedrivegui
     openfortivpn
+    wl-mirror
+    # Multimedia
     vlc
-    veloren
     #stremio
+    blender
+    blender-hip
+    inkscape-with-extensions
+    freecad
+    gimp-with-plugins
     # Image viewers
     #image-roll
     #feh
-    loupe
-    # PDF Editors
-    masterpdfeditor
-    papers
-    kdePackages.okular
+    loupe # Image viewer
     #
     gnome-power-manager
     gparted
-    # Browsers
+    # Internet
     librewolf
     floorp-bin
     ungoogled-chromium
     # Utilities
+    font-manager
     rustdesk-flutter
     pcloud
     filen-desktop
@@ -326,7 +343,6 @@
     tomato-c
     cryptomator
     anki
-    wl-mirror
     gearlever
     # System monitors
     mission-center
