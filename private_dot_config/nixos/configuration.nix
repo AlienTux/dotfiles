@@ -70,11 +70,11 @@
   #services.xserver.enable = true;
 
   # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
+  #services.displayManager.gdm.enable = true;
   #services.xserver.desktopManager.gnome.enable = true;
 
   # Enable lemurs TUI Display Manager
-  #services.displayManager.lemurs.enable = true;
+  services.displayManager.lemurs.enable = true;
   #services.displayManager.lemurs.settings = {
   #
   #};
