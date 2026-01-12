@@ -310,7 +310,7 @@
     # Multimedia
     vlc
     #stremio
-    blender
+    #blender
     blender-hip
     inkscape-with-extensions
     freecad
