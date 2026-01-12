@@ -89,7 +89,7 @@
 
   # Enable Niri
   programs.niri.enable = true;
-  programs.niri.useNautilus = false; # Testing out
+  programs.niri.useNautilus = true; # Testing out
   security.polkit.enable = true; # polkit
   services.gnome.gnome-keyring.enable = true; # secret service
   security.pam.services.swaylock = {};
