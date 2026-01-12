@@ -165,7 +165,7 @@
   users.users.alientux = {
     isNormalUser = true;
     description = "AlienTux";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "input" "syncthing"];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "input" "syncthing" "seat"];
     shell = pkgs.fish;
     packages = with pkgs; [
     #  here I can install packages for my user. I prefer to do it system-wide
