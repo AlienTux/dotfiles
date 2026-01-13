@@ -27,6 +27,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Enable USB 
+  services.udisks2.enable = true;
+  services.gvfs.enable = true;
+
   # Enable Bluetooth
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
