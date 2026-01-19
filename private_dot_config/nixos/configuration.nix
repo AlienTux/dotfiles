@@ -48,7 +48,7 @@
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 15d";
-  }
+  };
   nix.settings.auto-optimise-store = true;
 
   # Set your time zone.
