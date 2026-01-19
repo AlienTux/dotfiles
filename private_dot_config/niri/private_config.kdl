@@ -458,7 +458,7 @@ binds {
     //Alt+Tab { focus-workspace-previous; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+J hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+    Mod+J hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel" "--show-actions" "--counter" "--config=/home/alientux/.config/niri/fuzzel/fuzzel.ini"; }
     Super+Alt+A hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 
