@@ -35,6 +35,22 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
+  # Automatic updating
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
+    allowReboot = false;
+    runGarbageCollection = true;
+  };
+
+  # Automatic cleanup
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 15d";
+  }
+  nix.settings.auto-optimise-store = true;
+
   # Set your time zone.
   time.timeZone = "America/Guatemala";
 
@@ -229,6 +245,9 @@
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
+
+  # Install NH Nix-cli helper
+  # programs.nh.enable = true;
 
   # Install fish
   programs.fish.enable = true;
