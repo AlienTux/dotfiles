@@ -289,6 +289,8 @@
     # Applications for Niri
     alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl swaybg gammastep
     nautilus
+    swappy
+    logseq
     networkmanagerapplet
     polkit_gnome
     wlogout
