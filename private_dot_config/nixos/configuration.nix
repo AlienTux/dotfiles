@@ -293,6 +293,7 @@
     logseq
     networkmanagerapplet
     polkit_gnome
+    wl-clipboard-rs
     wlogout
     waylogout
     wleave
