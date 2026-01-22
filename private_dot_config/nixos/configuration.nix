@@ -314,6 +314,8 @@
     masterpdfeditor
     papers
     kdePackages.okular
+    gnucash
+    hledger
     #gnome-tweaks
     gedit
     dconf-editor
@@ -360,7 +362,6 @@
     fastfetch
     speedcrunch
     eza
-    hledger
     nnn
     atuin
     pavucontrol
