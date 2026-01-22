@@ -460,6 +460,15 @@
             params.keep = "10";
             params.cleanoutDays = "0";
           };
+        "PKMS" = {
+          id = "m5lcb-exmtg";
+          path = "~/pCloud_local/PKMS";
+          devices = ["OnePlusPhone" "SamsungTablet"];
+          versioning = {
+            type = "simple";
+            params.keep = "10";
+            params.cleanoutDays = "0";
+          };
         };
       };
     };
