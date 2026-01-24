@@ -249,6 +249,9 @@
   # Install NH Nix-cli helper
   # programs.nh.enable = true;
 
+  # Install Thunar
+  programs.thunar.enable = true;
+
   # Install fish
   programs.fish.enable = true;
 
@@ -300,8 +303,8 @@
     power-profiles-daemon
     chezmoi
     asusctl
-      # Testing
-      ghostty   
+    # Testing
+    ghostty
     # Eye-candy
     bibata-cursors
     papirus-icon-theme
@@ -377,6 +380,7 @@
     resources
     # Misc
     fuse
+    zotero
   ];
 
   ################################################################################
