@@ -322,6 +322,7 @@
     # Dolphin File Manager required files
     kdePackages.dolphin
     kdePackages.dolphin-plugins
+    kdePackages.ark
     kdePackages.baloo-widgets
     kdePackages.baloo
     kdePackages.qtsvg
