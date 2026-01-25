@@ -341,7 +341,7 @@
     wl-mirror
     # Multimedia
     vlc
-    #stremio
+    stremio
     #blender
     blender-hip
     inkscape-with-extensions
