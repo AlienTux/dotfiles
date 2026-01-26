@@ -314,6 +314,7 @@
     veloren    
     # Office
     libreoffice
+    onlyoffice-desktopeditors
     masterpdfeditor
     papers
     kdePackages.okular
