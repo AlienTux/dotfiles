@@ -342,8 +342,9 @@
     wl-mirror
     # Multimedia
     vlc
-    stremio
-    #blender
+    spotify
+    #stremio Not gonna install it this way because of security vulnerabilities. I'll use flatpak
+    blender
     blender-hip
     inkscape-with-extensions
     freecad
