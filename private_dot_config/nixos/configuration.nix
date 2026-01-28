@@ -359,7 +359,7 @@
     gnome-power-manager
     gparted
     # Internet
-    librewolf
+    # librewolf as of 2026.01.28 it doesn't compile
     floorp-bin
     ungoogled-chromium
     # Utilities
