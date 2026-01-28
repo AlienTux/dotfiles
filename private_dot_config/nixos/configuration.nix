@@ -359,7 +359,7 @@
     gnome-power-manager
     gparted
     # Internet
-    librewolf
+    #librewolf
     floorp-bin
     ungoogled-chromium
     # Utilities
