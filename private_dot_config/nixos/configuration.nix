@@ -315,6 +315,7 @@
     # Office
     libreoffice
     onlyoffice-desktopeditors
+    freeoffice
     masterpdfeditor
     papers
     kdePackages.okular
