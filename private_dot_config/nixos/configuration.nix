@@ -343,6 +343,7 @@
     # Multimedia
     vlc
     spotify
+    gradia # Screenshot editor
     #stremio Not gonna install it this way because of security vulnerabilities. I'll use flatpak
     blender
     blender-hip
