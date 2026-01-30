@@ -455,7 +455,11 @@
   };
 
   services.flatpak.enable = true;
-  
+
+  # Netbird configuration
+  services.netbird.enable = true;
+  services.netbird.ui.enable = true;
+
   # Syncthing configuration
   services.syncthing = {
     enable = true;
