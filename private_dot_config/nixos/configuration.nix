@@ -193,8 +193,8 @@
   };
 
   # Implement dark themes for QT & GTK
-  dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
-  dconf.settings."org/gnome/desktop/interface".gtk-theme = "Adwaita-dark";
+  # dconf.settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  # dconf.settings."org/gnome/desktop/interface".gtk-theme = "Adwaita-dark";
   qt = {
     enable = true;
     platformTheme.name = "kde";
