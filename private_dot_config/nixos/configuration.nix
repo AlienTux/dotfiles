@@ -376,6 +376,7 @@
     # librewolf as of 2026.01.28 it doesn't compile
     floorp-bin
     ungoogled-chromium
+    nextcloud-client
     # Utilities
     font-manager
     rustdesk-flutter
