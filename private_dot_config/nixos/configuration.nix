@@ -305,6 +305,9 @@
   #  wget
     # Applications for Niri
     alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl swaybg gammastep
+    pciutils
+    net-tools
+    ethtool
     nautilus
     swappy
     logseq
