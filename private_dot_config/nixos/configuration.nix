@@ -380,6 +380,7 @@
     floorp-bin
     ungoogled-chromium
     nextcloud-client
+    # nyxt installed via AppImage
     # Utilities
     font-manager
     rustdesk-flutter
