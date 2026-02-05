@@ -313,7 +313,7 @@
     # PKMS
     logseq
     notesnook
-    notesnook
+    standardnotes
     #
     networkmanagerapplet
     polkit_gnome
