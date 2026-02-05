@@ -136,8 +136,8 @@
   systemd.user.services.waybar.path = with pkgs; [
     wlogout
     wleave
-    pavucontrol
     waylogout
+    pavucontrol
     pamixer
     procps # Has `pkill`
   ];
@@ -310,7 +310,11 @@
     ethtool
     nautilus
     swappy
+    # PKMS
     logseq
+    notesnook
+    notesnook
+    #
     networkmanagerapplet
     polkit_gnome
     wl-clipboard-rs
@@ -356,6 +360,7 @@
     zoom-us
     remmina
     onedrivegui
+    # onedrive
     openfortivpn
     wl-mirror
     # Multimedia
