@@ -368,11 +368,14 @@
     spotify
     gradia # Screenshot editor
     #stremio Not gonna install it this way because of security vulnerabilities. I'll use flatpak
+    # Maker tools
     blender
     blender-hip
     inkscape-with-extensions
     freecad
     gimp-with-plugins
+    prusa-slicer
+    orca-slicer
     # Image viewers
     #image-roll
     #feh
