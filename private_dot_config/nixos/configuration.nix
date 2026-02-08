@@ -405,7 +405,7 @@
     tomato-c
     cryptomator
     anki
-    gearlever
+    # gearlever
     # System monitors
     mission-center
     resources
