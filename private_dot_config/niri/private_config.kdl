@@ -279,9 +279,9 @@ spawn-at-startup "wpaperd" "-d"
 environment {
     //DISPLAY ":11"
     //ELECTRON_OZONE_PLATFORM_HINT "auto"
-    NNN_PLUG "d:dragdrop;p:preview-tui"
-    NNN_FIFO "/tmp/nnn.fifo
-    LEDGER_FILE "/home/alientux/pCloud_local/PTA/daily.journal"
+    //NNN_PLUG "d:dragdrop;p:preview-tui"
+    //NNN_FIFO "/tmp/nnn.fifo"
+    //LEDGER_FILE "/home/alientux/pCloud_local/PTA/daily.journal"
     //XDG_CURRENT_DESKTOP "niri"
     //XDG_SESSION_TYPE "wayland"
     //QT_QPA_PLATFORM "wayland"
