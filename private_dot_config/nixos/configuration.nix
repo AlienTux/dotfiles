@@ -375,7 +375,7 @@
     #stremio Not gonna install it this way because of security vulnerabilities. I'll use flatpak
     # Maker tools
     blender
-    blender-hip
+    #blender-hip
     inkscape-with-extensions
     freecad
     gimp-with-plugins
