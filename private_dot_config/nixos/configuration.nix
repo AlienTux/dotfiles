@@ -305,6 +305,7 @@
   #  wget
     # Applications for Niri
     alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl swaybg gammastep
+    wpaperd
     pciutils
     net-tools
     ethtool
@@ -353,9 +354,10 @@
     kdePackages.baloo
     kdePackages.qtsvg
     kdePackages.kservice # Needed for kbuildsycoca6 to fix mimetypes not showing in Dolphin
-    # kdePackages.kio # needed since 25.11
+    kdePackages.kde-cli-tools # Needed to modify what program opens specific files in Dolphin (keditfiletype)
+    kdePackages.kio # needed since 25.11
     # kdePackages.kio-fuse #to mount remote filesystems via FUSE
-    # kdePackages.kio-extras #extra protocols support (sftp, fish and more)
+    kdePackages.kio-extras #extra protocols support (sftp, fish and more) Also for previews
     # Stuff for Uni...?
     zoom-us
     remmina
