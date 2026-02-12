@@ -218,6 +218,9 @@
     XDG_CURRENT_DESKTOP = "niri";
     XDG_SESSION_TYPE = "wayland";
     XDG_SESSION_DESKTOP = "niri";
+
+    NNN_PLUG = "d:dragdrop;p:preview-tui";
+    NNN_FIFO = "/tmp/nnn.fifo";
   };
 
   # Fix mimetypes in Dolphin File Manager when using other window manaders
