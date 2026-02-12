@@ -1,6 +1,6 @@
 [default]
 path = "/home/alientux/pCloud_local/wallpapers/archimg_cc"
-duration = "10s"
+duration = "15m"
 sorting = "random"
 mode = "fit"
 
