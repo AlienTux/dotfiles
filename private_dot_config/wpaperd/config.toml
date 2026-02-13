@@ -2,7 +2,7 @@
 path = "/home/alientux/pCloud_local/wallpapers/archimg_cc"
 duration = "15m"
 sorting = "random"
-mode = "fit"
+mode = "stretch"
 
 [default.transition.pixelize]
 # [default.transition.hexagonalize]
