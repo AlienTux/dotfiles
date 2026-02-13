@@ -326,7 +326,7 @@ animations {
 // Layer rules
 layer-rule {
     // match namespace="^wallpaper$" // for swaybg
-    match namespace="^wpaperd$" // for wpaperd
+    match namespace="^wpaperd" // for wpaperd
     place-within-backdrop true
 }
 
