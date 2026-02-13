@@ -197,7 +197,7 @@
   # dconf.settings."org/gnome/desktop/interface".gtk-theme = "Adwaita-dark";
   qt = {
     enable = true;
-    platformTheme.name = "kde";
+    platformTheme = "kde";
     style.name = "breeze";
   };
   # home.file.".config/kdeglobals" = {
