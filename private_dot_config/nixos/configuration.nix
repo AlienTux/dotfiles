@@ -198,7 +198,8 @@
   qt = {
     enable = true;
     platformTheme = "kde";
-    style.name = "breeze";
+    #style = "breeze";
+    style = "adwaita-dark";
   };
   # home.file.".config/kdeglobals" = {
   #   text = ''
