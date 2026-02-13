@@ -242,9 +242,9 @@
       };
       niri = {
         default = [
-          "gnome"
+#          "gnome"
           "gtk"
-          # "gnome" commented this temporarily
+          "gnome"
         ];
         "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
         "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
