@@ -311,6 +311,11 @@
     # Applications for Niri
     alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl swaybg gammastep
     wpaperd
+    impala
+    btop
+    bluetui
+    wiremix
+    ncdu
     pciutils
     net-tools
     ethtool
