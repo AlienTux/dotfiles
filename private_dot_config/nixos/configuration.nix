@@ -307,20 +307,41 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
     # Applications for Niri
-    alacritty fuzzel swaylock mako swayidle xwayland-satellite kitty brightnessctl swaybg gammastep
+    # alacritty # Preffer ghostty
+    # kitty # Prefer ghostty
+    ghostty
+    fuzzel
+    swaylock
+    mako
+    swayidle
+    xwayland-satellite
+    brightnessctl
+    gammastep
+    # swaybg # Wallpaper tool
     wpaperd
+    # TUI tools
     impala
     btop
     bluetui
     wiremix
     ncdu
+    yazi
+    nnn
+    # CLI tools
+    atuin
+    fastfetch
+    eza
     pciutils
     net-tools
     ethtool
+    chezmoi
+    wget
+    #
     nautilus
     swappy
+    wooz
+    wayscriber
     # PKMS
     logseq
     notesnook
@@ -333,10 +354,7 @@
     waylogout
     wleave
     power-profiles-daemon
-    chezmoi
     asusctl
-    # Testing
-    ghostty
     # Eye-candy
     bibata-cursors
     papirus-icon-theme
@@ -366,7 +384,7 @@
     kdePackages.kservice # Needed for kbuildsycoca6 to fix mimetypes not showing in Dolphin
     kdePackages.kde-cli-tools # Needed to modify what program opens specific files in Dolphin (keditfiletype)
     kdePackages.kio # needed since 25.11
-    # kdePackages.kio-fuse #to mount remote filesystems via FUSE
+    kdePackages.kio-fuse #to mount remote filesystems via FUSE
     kdePackages.kio-extras #extra protocols support (sftp, fish and more) Also for previews
     # Stuff for Uni...?
     zoom-us
@@ -406,11 +424,7 @@
     rustdesk-flutter
     pcloud
     filen-desktop
-    fastfetch
     speedcrunch
-    eza
-    nnn
-    atuin
     pavucontrol
     pamixer
     pom
