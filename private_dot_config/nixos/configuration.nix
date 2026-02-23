@@ -337,6 +337,7 @@
     ethtool
     chezmoi
     wget
+    xdg-utils
     #
     nautilus
     swappy
