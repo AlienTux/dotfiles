@@ -539,6 +539,16 @@
             params.cleanoutDays = "0";
           };
         };
+        "PTA" = {
+          id = "dhlqy-thsqx";
+          path = "~/pCloud_local/PTA";
+          devices = ["OnePlusPhone" "SamsungTablet"];
+          versioning = {
+            type = "simple";
+            params.keep = "10";
+            params.cleanoutDays = "0";
+          };
+        };  
       };
     };
   };
