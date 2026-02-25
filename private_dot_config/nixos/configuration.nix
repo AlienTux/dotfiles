@@ -220,8 +220,8 @@
     XDG_SESSION_TYPE = "wayland";
     XDG_SESSION_DESKTOP = "niri";
 
-    NNN_PLUG = "d:dragdrop;p:preview-tui";
-    NNN_FIFO = "/tmp/nnn.fifo";
+    # NNN_PLUG = "d:dragdrop;p:preview-tui";
+    # NNN_FIFO = "/tmp/nnn.fifo";
   };
 
   # Fix mimetypes in Dolphin File Manager when using other window manaders
@@ -269,7 +269,7 @@
   # programs.nh.enable = true;
 
   # Install Thunar
-  programs.thunar.enable = true;
+  # programs.thunar.enable = true;
 
   # Install fish
   programs.fish.enable = true;
@@ -318,16 +318,16 @@
     xwayland-satellite
     brightnessctl
     gammastep
-    # swaybg # Wallpaper tool
+    # swaybg # Wallpaper tool. wpaperd replaced it
     wpaperd
     # TUI tools
-    impala
+    # impala # Not working
     btop
     bluetui
     wiremix
     ncdu
     yazi
-    nnn
+    # nnn # Replaced by yazi
     # CLI tools
     atuin
     fastfetch
@@ -347,6 +347,8 @@
     logseq
     notesnook
     standardnotes
+    # emacs
+    emacsPackages.evil
     #
     networkmanagerapplet
     polkit_gnome
@@ -362,11 +364,11 @@
     # Gaming
     mangohud
     protonup-ng
-    veloren    
+    # veloren # Haven't played it at all
     # Office
     libreoffice
     onlyoffice-desktopeditors
-    freeoffice
+    # freeoffice
     masterpdfeditor
     papers
     kdePackages.okular
@@ -558,6 +560,10 @@
 
   # OneDrive
   services.onedrive.enable = true;
+
+  # Emacs daemon
+  services.emacs.enable = true;
+  services.emacs.defaultEditor = true;
 
   # Teamviewer
   #services.teamviewer.enable = true;
