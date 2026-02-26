@@ -405,7 +405,7 @@
     blender
     #blender-hip
     inkscape-with-extensions
-    freecad # Temporarily disabled because of build error
+    #freecad # Temporarily disabled because of build error
     gimp-with-plugins
     prusa-slicer
     orca-slicer
@@ -433,7 +433,7 @@
     pom
     tomato-c
     cryptomator
-    anki
+    #anki
     # gearlever
     # System monitors
     mission-center
