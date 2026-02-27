@@ -563,7 +563,7 @@
 
   # Emacs daemon
   services.emacs.enable = true;
-  services.emacs.defaultEditor = true;
+  # services.emacs.defaultEditor = true;
 
   # Teamviewer
   #services.teamviewer.enable = true;
