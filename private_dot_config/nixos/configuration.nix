@@ -222,7 +222,7 @@
 
     # NNN_PLUG = "d:dragdrop;p:preview-tui";
     # NNN_FIFO = "/tmp/nnn.fifo";
-    EDITOR = nano;
+    EDITOR = "nano";
   };
 
   # Fix mimetypes in Dolphin File Manager when using other window manaders
