@@ -33,7 +33,7 @@
 (deflayer gallium
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
- @capE n    r    t    s    v    y    p    e    a    i    /    ret
+ @capE @mSU @moS @moA @moc v    y    @MOc @MOa @MOs @MsU /    ret
   lsft x    g    m    c    q    k    h    '    ;    .    rsft
   lctl lmet lalt          spc             @3rd rmet rctl
 )
@@ -50,10 +50,14 @@
   pst C-v
   cut C-x
   udo C-z
-  ;;moC (tap-hold-press)
-  ;;moA ()
-  ;;moS ()
-  ;;mSu ()
+  moC (tap-hold-press 200 200 s lctl)
+  moA (tap-hold-press 200 200 t lalt)
+  moS (tap-hold-press 200 200 r lsft)
+  mSu (tap-hold-press 200 200 n lmet)
+  MOc (tap-hold-press 200 200 p lctl)
+  MOa (tap-hold-press 200 200 e lalt)
+  MOs (tap-hold-press 200 200 a lsft)
+  MsU (tap-hold-press 200 200 i lmet)
   capE (tap-hold-press 200 200 caps @ext)
 )
 

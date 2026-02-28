@@ -486,7 +486,7 @@
   services.kanata = {
     enable = true;
     keyboards = {
-      gallium.configFile = /home/alientux/bin/kanata/kanata-current/gallium.kbd; 
+      gallium.configFile = /home/alientux/bin/kanata/kanata-current/gallium.kbd;
       gallium.port = 5829;
     };
   };
