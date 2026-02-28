@@ -128,7 +128,7 @@
       TimeoutStopSec = 10;
     };
   };
-  
+9;5u  
   # Enable Waybar
   programs.waybar.enable = true; # top bar
 
@@ -486,7 +486,7 @@
   services.kanata = {
     enable = true;
     keyboards = {
-      gallium.configFile = /home/alientux/bin/kanata/kanata-current/gallium.kbd; 
+      gallium.configFile = /home/alientux/bin/kanata/kanata-current/gallium.kbd;
       gallium.port = 5829;
     };
   };
