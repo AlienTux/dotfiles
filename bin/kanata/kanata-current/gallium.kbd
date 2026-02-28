@@ -33,7 +33,7 @@
 (deflayer gallium
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
-  @ext n    r    t    s    v    y    p    e    a    i    /    ret
+ @capE n    r    t    s    v    y    p    e    a    i    /    ret
   lsft x    g    m    c    q    k    h    '    ;    .    rsft
   lctl lmet lalt          spc             @3rd rmet rctl
 )
@@ -50,6 +50,11 @@
   pst C-v
   cut C-x
   udo C-z
+  ;;moC (tap-hold-press)
+  ;;moA ()
+  ;;moS ()
+  ;;mSu ()
+  capE (tap-hold-press 200 200 caps @ext)
 )
 
 (deflayer extend
