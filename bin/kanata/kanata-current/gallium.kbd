@@ -50,14 +50,14 @@
   pst C-v
   cut C-x
   udo C-z
-  moC (tap-hold-press 200 200 s lctl)
-  moA (tap-hold-press 200 200 t lalt)
-  moS (tap-hold-press 200 200 r lsft)
-  mSu (tap-hold-press 200 200 n lmet)
-  MOc (tap-hold-press 200 200 p lctl)
-  MOa (tap-hold-press 200 200 e lalt)
-  MOs (tap-hold-press 200 200 a lsft)
-  MsU (tap-hold-press 200 200 i lmet)
+  moC (tap-hold 200 200 s lctl)
+  moA (tap-hold 200 200 t lalt)
+  moS (tap-hold 200 200 r lsft)
+  mSu (tap-hold 200 200 n lmet)
+  MOc (tap-hold 200 200 p lctl)
+  MOa (tap-hold 200 200 e lalt)
+  MOs (tap-hold 200 200 a lsft)
+  MsU (tap-hold 200 200 i lmet)
   capE (tap-hold-press 200 200 caps @ext)
 )
 
