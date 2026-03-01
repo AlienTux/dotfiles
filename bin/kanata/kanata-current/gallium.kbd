@@ -32,7 +32,7 @@
 ;; kanata starts up.
 
 ;; Gallium with a few basic modifiers. Good for gaming. No home row modifiers
-(deflayer gallium-noHomeMods
+(deflayer galliumNoHomeMods
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
  @capE n    r    t    s    v    y    p    e    a    i    /    ret
@@ -40,7 +40,7 @@
   lctl lmet lalt          spc             @3rd rmet rctl
 )
 
-(deflayer gallium-homeMods
+(deflayer galliumHomeMods
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
  @capE @mSu @moS @moA @moC v    y    @MOc @MOa @MOs @MsU /    ret
