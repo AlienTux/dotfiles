@@ -52,7 +52,7 @@
 
 (defalias
   ext (layer-while-held extend)
-  gam (layer-switch gallium)
+  ;;gam (layer-switch gallium)
   ;; The @ded and @3rd bring up the accent layer. They're shown below.
   3rd (layer-while-held accent)
   sAl C-a
