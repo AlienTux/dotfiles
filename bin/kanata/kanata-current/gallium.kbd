@@ -30,7 +30,17 @@
 
 ;; The first layer defined is the layer that will be active by default when
 ;; kanata starts up.
-(deflayer gallium
+
+;; Gallium with a few basic modifiers. Good for gaming. No home row modifiers
+(deflayer gallium-noHomeMods
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
+ @capE n    r    t    s    v    y    p    e    a    i    /    ret
+  lsft x    g    m    c    q    k    h    '    ;    .    rsft
+  lctl lmet lalt          spc             @3rd rmet rctl
+)
+
+(deflayer gallium-homeMods
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
  @capE @mSu @moS @moA @moC v    y    @MOc @MOa @MOs @MsU /    ret
@@ -42,7 +52,7 @@
 
 (defalias
   ext (layer-while-held extend)
-  can (layer-switch gallium)
+  gam (layer-switch gallium)
   ;; The @ded and @3rd bring up the accent layer. They're shown below.
   3rd (layer-while-held accent)
   sAl C-a
@@ -50,15 +60,16 @@
   pst C-v
   cut C-x
   udo C-z
-  moC (tap-hold 200 200 s lctl)
-  moA (tap-hold 200 200 t lalt)
-  moS (tap-hold 200 200 r lsft)
-  mSu (tap-hold 200 200 n lmet)
-  MOc (tap-hold 200 200 p lctl)
-  MOa (tap-hold 200 200 e lalt)
-  MOs (tap-hold 200 200 a lsft)
-  MsU (tap-hold 200 200 i lmet)
-  capE (tap-hold-press 200 200 caps @ext)
+  ;; (multi f24 (tap-hold …​))
+  moC (multi f16 (tap-hold 200 200 s lctl))
+  moA (multi f17 (tap-hold 200 200 t lalt))
+  moS (multi f18 (tap-hold 200 200 r lsft))
+  mSu (multi f19 (tap-hold 200 200 n lmet))
+  MOc (multi f20 (tap-hold 200 200 p lctl))
+  MOa (multi f21 (tap-hold 200 200 e lalt))
+  MOs (multi f22 (tap-hold 200 200 a lsft))
+  MsU (multi f23 (tap-hold 200 200 i lmet))
+  capE (multi f24 (tap-hold-press 200 200 caps @ext))
 )
 
 (deflayer extend
