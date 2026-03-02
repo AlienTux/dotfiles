@@ -499,7 +499,7 @@
   # Enable asusd daemon for ROG Control Center
   services.asusd = {
     enable = true;
-    enableUserService = true;
+    #enableUserService = true;
   };
 
   services.flatpak.enable = true;
