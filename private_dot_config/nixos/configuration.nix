@@ -348,7 +348,7 @@
     logseq
     notesnook
     standardnotes
-    # emacs
+    # emacs-pgtk
     emacsPackages.evil
     #
     networkmanagerapplet
@@ -563,6 +563,7 @@
   services.onedrive.enable = true;
 
   # Emacs daemon
+  services.emacs.package = pkgs.emacs-pgtk;
   services.emacs.enable = true;
   # services.emacs.defaultEditor = true;
 
