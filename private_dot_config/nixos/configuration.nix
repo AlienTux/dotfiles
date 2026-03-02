@@ -373,8 +373,12 @@
     masterpdfeditor
     papers
     kdePackages.okular
+    # Finances
     gnucash
     hledger
+    hledger-ui
+    paisa
+    puffin
     #gnome-tweaks
     gedit
     dconf-editor
