@@ -438,8 +438,7 @@
     pom
     tomato-c
     cryptomator
-    # anki
-    # gearlever
+    anki
     # System monitors
     mission-center
     resources
