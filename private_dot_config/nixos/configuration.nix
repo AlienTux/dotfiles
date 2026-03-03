@@ -223,6 +223,7 @@
     # NNN_PLUG = "d:dragdrop;p:preview-tui";
     # NNN_FIFO = "/tmp/nnn.fifo";
     EDITOR = "nano";
+    LEDGER_FILE = "/home/alientux/pCloud_local/PTA/daily.journal";
   };
 
   # Fix mimetypes in Dolphin File Manager when using other window manaders
