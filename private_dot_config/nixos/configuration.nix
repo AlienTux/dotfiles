@@ -269,6 +269,12 @@
   # Install NH Nix-cli helper
   # programs.nh.enable = true;
 
+  # Install LocalSend
+  programs.localsend = {
+    enable = true;
+    openFirewall = true;
+  };
+
   # Install Thunar
   # programs.thunar.enable = true;
 
