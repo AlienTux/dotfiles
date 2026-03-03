@@ -420,7 +420,7 @@
     gimp-with-plugins
     prusa-slicer
     orca-slicer
-    arduino
+    arduino-cli
     arduino-ide
     # Image viewers
     #image-roll
