@@ -262,6 +262,9 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Install Neovim
+  programs.neovim.enable = true;
+
   # Install Steam
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
