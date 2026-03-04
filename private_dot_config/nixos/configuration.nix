@@ -349,10 +349,6 @@
     chezmoi
     wget
     xdg-utils
-    ripgrep
-    vimPlugins.orgmode
-    vimPlugins.org-roam-nvim
-    vimPlugins.org-notebook-nvim
     #
     nautilus
     swappy

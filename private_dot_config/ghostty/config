@@ -48,4 +48,4 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-family = Atkinson Hyperlegible Mono Regular
+# font-family = Atkinson Hyperlegible Mono Regular
