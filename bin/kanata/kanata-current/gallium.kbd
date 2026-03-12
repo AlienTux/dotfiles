@@ -155,7 +155,7 @@
 
 ;;@num brings out the numpadLayer. It's used in the 'extend' layer above.
 (deflayer numpadLayer
-  _    _    _    _    _    _    _   kp7  kp8  kp9   *    -    _    _
+  _    _    _    _    _    _    _   kp7  kp8  kp9  S-8   -    _    _
   _    _    _    _    _    _    _   kp4  kp5  kp6  kp+   _    _    _
   _    _    _    _    _    _    _   kp1  kp2  kp3 enter  _    _
   _    _    _    _    _    _    _   kp0  kp0  kp.  kp/   _
