@@ -70,7 +70,8 @@
   ;;MOs (multi f22 (tap-hold 200 200 _ lsft))
   ;;MsU (multi f23 (tap-hold 200 200 _ lmet))
   capE (multi f24 (tap-hold-press 200 200 caps @ext))
-  ctl (multi f16 (one-shot-pause-processing 200)(tap-hold 200 200 (one-shot 1000 lctl) lctl))
+  ;;ctl (multi f16 (one-shot-pause-processing 200)(tap-hold 200 200 (one-shot 1000 lctl) lctl))
+  ctl (multi (one-shot-pause-processing 5) (one-shot 1000 lctl))
   ;;osc (one-shot 1000 lctl)
 )
 
