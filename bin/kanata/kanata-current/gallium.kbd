@@ -40,13 +40,13 @@
   lctl lmet lalt          spc             @3rd rmet rctl
 )
 
-(deflayer galliumHomeMods
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-  tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
- @capE @mSu @moS @moA @moC v    y    @MOc @MOa @MOs @MsU /    ret
-  lsft x    g    m    c    q    k    h    '    ;    .    rsft
-  lctl lmet lalt          spc             @3rd rmet rctl
-)
+;;(deflayer galliumHomeMods
+;;  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+;;  tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
+;; @capE @mSu @moS @moA @moC v    y    @MOc @MOa @MOs @MsU /    ret
+;;  lsft x    g    m    c    q    k    h    '    ;    .    rsft
+;;  lctl lmet lalt          spc             @3rd rmet rctl
+;;)
 
 ;; Extended layer
 
@@ -61,21 +61,23 @@
   cut C-x
   udo C-z
   ;; (multi f24 (tap-hold …​))
-  moC (multi f16 (tap-hold 200 200 s lctl))
-  moA (multi f17 (tap-hold 200 200 t lalt))
-  moS (multi f18 (tap-hold 200 200 r lsft))
-  mSu (multi f19 (tap-hold 200 200 n lmet))
-  MOc (multi f20 (tap-hold 200 200 p lctl))
-  MOa (multi f21 (tap-hold 200 200 e lalt))
-  MOs (multi f22 (tap-hold 200 200 a lsft))
-  MsU (multi f23 (tap-hold 200 200 i lmet))
+  ;;moC (multi f16 (tap-hold 200 200 _ lctl))
+  ;;moA (multi f17 (tap-hold 200 200 _ lalt))
+  ;;moS (multi f18 (tap-hold 200 200 _ lsft))
+  ;;mSu (multi f19 (tap-hold 200 200 _ lmet))
+  ;;MOc (multi f20 (tap-hold 200 200 _ lctl))
+  ;;MOa (multi f21 (tap-hold 200 200 _ lalt))
+  ;;MOs (multi f22 (tap-hold 200 200 _ lsft))
+  ;;MsU (multi f23 (tap-hold 200 200 _ lmet))
   capE (multi f24 (tap-hold-press 200 200 caps @ext))
+  ctl (multi f16 (tap-hold 200 200 @osc lctl))
+  osc (one-shot 1000 lctl)
 )
 
 (deflayer extend
   _    _    _    _    _    _    _    _    _    _    _    _    _    _
   _   @ded esc  @num  _    _   pgup home  up  bspc  _    _    _    _
-  _   @sAl lalt lsft lctl  _   pgdn lft  down rght @ded  _    _
+  _   @sAl lalt lsft @ctl  _   pgdn lft  down rght @ded  _    _
   _   @udo @cut @cpy @pst  _    _   end   _   del   _    _
   _    _    _            enter            _    _    _
 )
