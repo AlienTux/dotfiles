@@ -35,7 +35,7 @@
 (deflayer galliumNoHomeMods
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
- @capE n    r    t    s    v    y    p    e    a    i    /    ret
+ @ext  n    r    t    s    v    y    p    e    a    i    /    ret
   lsft x    g    m    c    q    k    h    '    ;    .    rsft
   lctl lmet lalt          spc             @3rd rmet rctl
 )
@@ -81,7 +81,7 @@
 
 
 (deflayer extend
- lrld _    _    _    _    _    _    _    _    _    _    _    _    _
+ lrld _    _    _     _    _    _    _    _    _    _    _    _    _
   _   @ded esc  @num  _    _   pgup home  up  bspc  _    _    _    _
   _   @sAl lalt lsft @ctl  _   pgdn lft  down rght @ded  _    _
   _   @udo @cut @cpy @pst  _    _   end   _   del   _    _
