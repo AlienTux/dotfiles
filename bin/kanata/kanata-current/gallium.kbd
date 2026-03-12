@@ -42,14 +42,6 @@
   lctl lmet lalt          spc             @3rd rmet rctl
 )
 
-;;(deflayer galliumHomeMods
-;;  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
-;;  tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
-;; @capE @mSu @moS @moA @moC v    y    @MOc @MOa @MOs @MsU /    ret
-;;  lsft x    g    m    c    q    k    h    '    ;    .    rsft
-;;  lctl lmet lalt          spc             @3rd rmet rctl
-;;)
-
 ;; Extended layer
 
 (defalias
@@ -62,22 +54,12 @@
   pst C-v
   cut C-x
   udo C-z
-  ;; (multi f24 (tap-hold …​))
-  ;;moC (multi f16 (tap-hold 200 200 _ lctl))
-  ;;moA (multi f17 (tap-hold 200 200 _ lalt))
-  ;;moS (multi f18 (tap-hold 200 200 _ lsft))
-  ;;mSu (multi f19 (tap-hold 200 200 _ lmet))
-  ;;MOc (multi f20 (tap-hold 200 200 _ lctl))
-  ;;MOa (multi f21 (tap-hold 200 200 _ lalt))
-  ;;MOs (multi f22 (tap-hold 200 200 _ lsft))
-  ;;MsU (multi f23 (tap-hold 200 200 _ lmet))
   capE (multi f24 (tap-hold-press 200 200 caps @ext))
-  ;;ctl (multi f16 (one-shot-pause-processing 200)(tap-hold 200 200 (one-shot 1000 lctl) lctl))
   ctl (multi (one-shot-pause-processing 5) (one-shot 1000 lctl))
   alt (multi (one-shot-pause-processing 5) (one-shot 1000 lalt))
-  ;;osc (one-shot 1000 lctl)
 )
 
+;; Chords to make it easier to do one-shot HomeRow Mods
 (defchordsv2
   (f j) (one-shot 1000 lctl) 50 all-released  ()
   (d k) (one-shot 1000 lalt) 50 all-released  ()
