@@ -72,6 +72,7 @@
   capE (multi f24 (tap-hold-press 200 200 caps @ext))
   ;;ctl (multi f16 (one-shot-pause-processing 200)(tap-hold 200 200 (one-shot 1000 lctl) lctl))
   ctl (multi (one-shot-pause-processing 5) (one-shot 1000 lctl))
+  alt (multi (one-shot-pause-processing 5) (one-shot 1000 lalt))
   ;;osc (one-shot 1000 lctl)
 )
 
@@ -83,7 +84,7 @@
 (deflayer extend
  lrld _    _    _     _    _    _    _    _    _    _    _    _    _
   _   @ded esc  @num  _    _   pgup home  up  bspc  _    _    _    _
-  _   @sAl lalt lsft @ctl  _   pgdn lft  down rght @ded  _    _
+  _   @sAl @alt lsft @ctl  _   pgdn lft  down rght @ded  _    _
   _   @udo @cut @cpy @pst  _    _   end   _   del   _    _
   _    _    _            enter            _    _    _
 )
