@@ -70,12 +70,17 @@
   ;;MOs (multi f22 (tap-hold 200 200 _ lsft))
   ;;MsU (multi f23 (tap-hold 200 200 _ lmet))
   capE (multi f24 (tap-hold-press 200 200 caps @ext))
-  ctl (multi f16 (tap-hold 200 200 @osc lctl))
-  osc (one-shot 1000 lctl)
+  ctl (multi f16 (one-shot-pause-processing 200)(tap-hold 200 200 (one-shot 1000 lctl) lctl))
+  ;;osc (one-shot 1000 lctl)
 )
 
+;;(defchords homeRowMods 100
+;;  ()
+;;)
+
+
 (deflayer extend
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+ lrld _    _    _    _    _    _    _    _    _    _    _    _    _
   _   @ded esc  @num  _    _   pgup home  up  bspc  _    _    _    _
   _   @sAl lalt lsft @ctl  _   pgdn lft  down rght @ded  _    _
   _   @udo @cut @cpy @pst  _    _   end   _   del   _    _
