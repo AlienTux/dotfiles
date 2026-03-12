@@ -79,10 +79,10 @@
 )
 
 (defchordsv2
-  (f j) (one-shot 1000 lctl) 25 all-released  ()
-  (d k) (one-shot 1000 lalt) 25 all-released  ()
-  (s l) (one-shot 1000 lsft) 25 all-released  ()
-  (a ;) (one-shot 1000 lmet) 25 all-released  ()
+  (f j) (one-shot 1000 lctl) 50 all-released  ()
+  (d k) (one-shot 1000 lalt) 50 all-released  ()
+  (s l) (one-shot 1000 lsft) 50 all-released  ()
+  (a ;) (one-shot 1000 lmet) 50 all-released  ()
 )
 
 (deflayer extend
