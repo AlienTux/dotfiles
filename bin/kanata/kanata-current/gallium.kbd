@@ -11,6 +11,8 @@
 
 (defcfg
   sequence-input-mode visible-backspaced
+  concurrent-tap-hold yes
+  chords-v2-min-idle 5 ;; 5 is the default value
 )
 
 
@@ -35,7 +37,7 @@
 (deflayer galliumNoHomeMods
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  b    l    d    w    j    z    f    o    u    ,    [    ]    \
- @ext  n    r    t    s    v    y    p    e    a    i    /    ret
+ @capE n    r    t    s    v    y    p    e    a    i    /    ret
   lsft x    g    m    c    q    k    h    '    ;    .    rsft
   lctl lmet lalt          spc             @3rd rmet rctl
 )
@@ -76,13 +78,15 @@
   ;;osc (one-shot 1000 lctl)
 )
 
-;;(defchords homeRowMods 100
-;;  ()
-;;)
-
+(defchordsv2
+  (s p) (one-shot 1000 lctl) 100 all-released  ()
+  (t e) (one-shot 1000 lalt) 100 all-released  ()
+  (r a) (one-shot 1000 lsft) 100 all-released  ()
+  (n i) (one-shot 1000 lmet) 100 all-released  ()
+)
 
 (deflayer extend
- lrld _    _    _     _    _    _    _    _    _    _    _    _    _
+  _   _    _    _     _    _    _    _    _    _    _    _    _    _
   _   @ded esc  @num  _    _   pgup home  up  bspc  _    _    _    _
   _   @sAl @alt lsft @ctl  _   pgdn lft  down rght @ded  _    _
   _   @udo @cut @cpy @pst  _    _   end   _   del   _    _
@@ -151,7 +155,7 @@
 
 ;;@num brings out the numpadLayer. It's used in the 'extend' layer above.
 (deflayer numpadLayer
-  _    _    _    _    _    _    _   kp7  kp8  kp9  kp*  kp-   _    _
+  _    _    _    _    _    _    _   kp7  kp8  kp9   *    -    _    _
   _    _    _    _    _    _    _   kp4  kp5  kp6  kp+   _    _    _
   _    _    _    _    _    _    _   kp1  kp2  kp3 enter  _    _
   _    _    _    _    _    _    _   kp0  kp0  kp.  kp/   _
