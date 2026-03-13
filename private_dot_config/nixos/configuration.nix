@@ -362,8 +362,12 @@
     logseq
     notesnook
     standardnotes
+    # emacs
     # emacs-pgtk
-    emacsPackages.evil
+    # emacsPackages.evil
+    coreutils
+    fd
+    clang
     #
     networkmanagerapplet
     polkit_gnome
